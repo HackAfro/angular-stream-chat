@@ -1,5 +1,7 @@
 # Stream Chat Application
 
+![ScreenShot: App Main Screen](https://github.com/HackAfro/angular-stream-chat/blob/master/src/assets/chat-view.png)
+
 This repository contains the code for the chat frontend application. This application makes requests to a Django server you can find [here](https://github.com/HackAfro/django-stream-server)
 
 ## Getting up and running
