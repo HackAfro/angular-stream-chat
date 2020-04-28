@@ -1,0 +1,134 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+
+  .chat-box {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    .message-area {
+      border-radius: 8px 8px 0 0;
+      max-height: 450px;
+      height: 450px;
+      padding: 0 20px 20px 20px;
+      overflow: auto;
+      background-color: #f2f5e7;
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px 0 0;
+
+        p {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid #ec3062;
+        }
+      }
+
+      .message {
+        p {
+          color: white;
+          font-size: 13px;
+          font-weight: 600;
+          margin: 0px;
+          width: 45%;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+          padding: 7px 10px;
+          margin: 5px 0;
+        }
+      }
+
+      .message.incoming {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        p {
+          border-radius: 0 11px 11px 11px;
+          background: black;
+          color: white;
+        }
+      }
+
+      .message.outgoing {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        p {
+          border-radius: 11px 11px 0 11px;
+          background: #ec3062;
+        }
+      }
+    }
+
+    .input-area {
+      padding: 10px;
+      border-radius: 3px;
+      background-color: rgb(222, 222, 240);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+      form {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+
+        input {
+          border: none;
+          padding: 5px 10px;
+          color: rgba(0, 0, 0, 0.5);
+          font-size: 12px;
+          font-weight: 500;
+          min-width: 65%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        button {
+          width: 35px;
+          height: 35px;
+          border: none;
+          color: rgba(0, 0, 0, 0.32);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+        }
+
+        button.send {
+          background: #ec3062;
+          color: white;
+
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
