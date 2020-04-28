@@ -52,7 +52,7 @@ export class ChatComponent implements OnInit {
       );
       await this.channel.watch();
 
-      this.messages = this.channel.state.messages;
+      this.messages = this.channel.state.messages as any;
       this.channel.on('message.new', (event) => {
         this.messages = this.messages.concat(event.message);
       });
