@@ -1,0 +1,34 @@
+<div class="main">
+  <div class="chat-box">
+    <div class="message-area">
+      <header>
+        <p>{{ channel.id }}</p>
+        <img src="https://randomuser.me/api/portraits/lego/8.jpg" alt="" />
+      </header>
+      <div
+        class="message"
+        *ngFor="let message of messages"
+        [ngClass]="getClasses(message.user.id)"
+      >
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+    <div class="input-area">
+      <form (submit)="sendMessage()" name="messageForm">
+        <button>
+          <span data-feather="smile"></span>
+        </button>
+        <input
+          placeholder="Type your message"
+          type="text"
+          name="message"
+          id="message"
+          [(ngModel)]="message"
+        />
+        <button class="send">
+          <span data-feather="send"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
